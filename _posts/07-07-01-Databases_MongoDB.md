@@ -4,8 +4,7 @@ title:   MongoDB
 anchor:  databases_mongodb
 ---
 
-## MongoDB
-{#databases_mongodb_title}
+## MongoDB {#databases_mongodb_title}
 
 [MongoDB][1] is a leading NoSQL database that stores data in JSON-like documents, providing flexibility and scalability for various application needs. MongoDB can support multiple data models, making it versatile for different use cases.
 
