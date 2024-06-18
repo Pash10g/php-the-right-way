@@ -29,7 +29,7 @@ MongoDB provides a robust driver for PHP, enabling developers to interact with M
 
 #### Installing the MongoDB PHP Driver
 
-To install the MongoDB PHP driver, you can use the following commands:
+To install the MongoDB PHP extension, you can use the following commands:
 
 ```shell
 # Install the MongoDB extension for PHP
@@ -39,25 +39,38 @@ sudo pecl install mongodb
 echo "extension=mongodb.so" >> <YOUR_PHP_INI_PATH>/php.ini
 ```
 
+To install the MongoDB Driver, you can use the following command:
+```shell
+composer require mongodb/mongodb
+```
+
 #### Using the MongoDB PHP Library
 Once the driver is installed, you can use the MongoDB PHP library to connect to your MongoDB database and perform operations. Here's an example:
 
 ```php
 <?php
+require 'vendor/autoload.php'; // Include Composer's autoloader
 
-require 'vendor/autoload.php'; // include Composer's autoloader
+use MongoDB\Client;
 
-$client = new MongoDB\Client("mongodb://localhost:27017");
-$collection = $client->demo->beers;
+// Replace the placeholder with your Atlas connection string
+$uri = '<your-moggodb-connection-uri>';
 
-// Insert a document
-$result = $collection->insertOne(['name' => 'Hinterland', 'brewery' => 'Coopers', 'abv' => 5.5]);
-echo "Inserted with Object ID '{$result->getInsertedId()}'";
+// Create a new client and connect to the server
+$client = new Client($uri);
+try {
+    $collection = $client->demo->beers;
 
-// Query a document
-$beer = $collection->findOne(['name' => 'Hinterland']);
-echo "Beer: ", $beer['name'], " Brewery: ", $beer['brewery'], " ABV: ", $beer['abv'], "\n";
+    // Insert a document
+    $result = $collection->insertOne(['name' => 'Hinterland', 'brewery' => 'Coopers', 'abv' => 5.5]);
+    echo "Inserted with Object ID '{$result->getInsertedId()}'\n";
 
+    // Query a document
+    $beer = $collection->findOne(['name' => 'Hinterland']);
+    echo "Beer: ", $beer['name'], " Brewery: ", $beer['brewery'], " ABV: ", $beer['abv'], "\n";
+} catch (Exception $e) {
+    printf("Caught exception: %s\n", $e->getMessage());
+}
 ?>
 ```
 
