@@ -14,6 +14,12 @@ anchor:  databases_mongodb
 - **Scalability**: Supports horizontal scaling through sharding.
 - **Aggregation Framework**: Powerful querying and data aggregation capabilities.
 - **High Performance**: Optimized for read and write operations.
+
+Sure, here's a revised version of the sentence:
+
+markdown
+Copy code
+- **Advanced Indexing**: MongoDB offers a comprehensive range of indexing options, including standard compound indexes, text indexes, vector indexes, and geospatial indexes.
 - **Multi-Model Support**: MongoDB can support key-value, graph, and time-series data models, providing a comprehensive solution for various data needs.
 
 ### MongoDB as a Multi-Model Database
