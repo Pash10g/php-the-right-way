@@ -36,7 +36,7 @@ To install the MongoDB PHP driver, you can use the following commands:
 sudo pecl install mongodb
 
 # Enable the extension in your php.ini file
-echo "extension=mongodb.so" ...
+echo "extension=mongodb.so" >> <YOUR_PHP_INI_PATH>/php.ini
 ```
 
 #### Using the MongoDB PHP Library
