@@ -13,8 +13,6 @@ NoSQL databases provide a mechanism for storage and retrieval of data that is mo
 3. **Column-Oriented Databases**: Data is stored in columns instead of rows. Example: Apache Cassandra.
 4. **Graph Databases**: Store data in graph structures with nodes, edges, and properties. Example: Neo4j.
 
-MongoDB being the leading NoSQL database can work
-
 ## Why NoSQL?
 
 - **Flexibility**: NoSQL databases often use flexible data models, allowing for more rapid changes and iterations.
