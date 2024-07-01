@@ -77,6 +77,13 @@ try {
 
 For more information, refer to the official [MongoDB PHP documentation][2].
 
+### MongoDB and PHP Frameworks
+
+MongoDB integrates seamlessly with popular PHP frameworks such as Laravel and Symfony. This compatibility allows developers to leverage MongoDB's powerful features while using the familiar structures and tools provided by these frameworks. For detailed instructions on how to integrate MongoDB with Laravel, please refer to the [Laravel MongoDB Documentation][3]. Similarly, for Symfony users, comprehensive guidance is available in the [Symfony MongoDB Documentation][4].
+
+
 
 [1]: https://www.mongodb.com/
 [2]: https://www.mongodb.com/docs/drivers/php-drivers/
+[3]: https://www.mongodb.com/docs/drivers/php/laravel-mongodb/
+[4]: https://www.mongodb.com/docs/drivers/php-frameworks/symfony/
